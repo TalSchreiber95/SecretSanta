@@ -3,6 +3,13 @@
 ## Overview
 This Python script automates the process of sending Secret Santa emails to participants. It generates a randomized assignment of "dwarfs" and "giants" and sends personalized emails to each participant.
 
+The example below illustrates the email participants will receive, providing details about the game and revealing who their assigned "giant" is. The script adds a touch of excitement and anticipation to the Secret Santa experience!
+
+Please note that the email address of the sender is defined when running the code and can be easily changed to suit individual preferences.
+
+![Mail Example](https://github.com/TalSchreiber95/SecretSanta/raw/main/images/mailExample.jpg)
+
+
 ## Prerequisites
 Before running the script, make sure you have the following installed:
 
