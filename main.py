@@ -21,25 +21,28 @@ def sendmail(users):
                 outlook = win32com.client.Dispatch('outlook.application')
                 mail = outlook.CreateItem(0)
                 mail.To = user['email']
-
-                mail.Subject = 'Secret Santa\'s message received'
-                mail.HTMLBody = f"<p><b style='color: blue;'>Hello dwarf {user['engName']}!</b></p>" \
-                                f"<p><b style='color: green;'>Your giant name is: {user['engGiant']}.</b></p>" \
-                                f"<p>This message is an <b style='color: red;'>official message</b> " \
-                                f"for the Secret Santa system.</p>" \
-                                f"<p>Please send to the \"Perfect farts!💨😍\" family group a confirmation message" \
-                                f" that you have received this message and you've got your giant name.</p>" \
-                                f"<p><b style='color: red;'>Please note, maximum budget: 50 NIS</b></p>" \
-                                f"<p>Thanks for the collaboration - Secret Santa Team !</p>" \
+                mail.Subject = 'Mini surprise for Hanukkah! 🎁🕎✨'
+                mail.HTMLBody = f"<p><b style='color: blue;'>Hi dwarf {user['engName']}! </b></p>" \
+                                f"<p>Guess what? Your Secret Santa is on a mission to spread some Hanukkah magic! " \
+                                f"🕎 Get ready for a brighter gift than a dreidel. 🎁</p>" \
+                                f"<p><b style='color: green;'>Your giant name is: {user['engGiant']} </b> 🌟🎅🎉</p>" \
+                                f"<p><b style='color: red;'>Please note, maximum budget: 50 NIS </b> 💰</p> <br>" \
+                                f"<p>This message is an<b style='color: red;'> official message</b> " \
+                                f"for the dwarf and giant system.</p>" \
+                                f"<p>P.S. Please send to the \"Perfect farts💨😍\" family group a confirmation message " \
+                                f"that you have received this message and you've got your giant name. 📬</p>" \
+                                f"<p>Thanks for the collaboration - Secret Santa Team 🎅🤶</p>" \
                                 f"<br><br>" \
+                                f"<br>" \
                                 f"<p><b style='color: blue;'> שלום הגמד/ה {user['hebName']}!</b></p>" \
-                                f"<p><b style='color: green;'>שם הענק שלך: {user['hebGiant']}</b></p>" \
-                                f"<p>הודעה זו היא<b style='color: red;'> הודעה לא רשמית</b> למערכת הגמד והענק.</p>" \
-                                f"<p>אנא שלח/י לקבוצת המשפחה \"פלצנות מושלמת!💨😍\" הודעת אישור שאת/ה " \
-                                f"קיבלת הודעה זאת וקיבלת את שם הענק שלך</p>" \
-                                f"<p><b style='color: red;'>שימו לב, תקציב מקסימלי: 50 ש\"ח</b></p>" \
-                                f"<p>! תודה על שיתוף הפעולה - צוות הגמד והענק</p>"
-
+                                f"<p>נחש מה? סנטה הסודי שלך במשימה להפיץ קצת קסם של חנוכה! 🕎" \
+                                f" התכוננו למתנה מדליקה יותר מסביבון. 🎁</p>" \
+                                f"<p> 🌟🎅🎉 <b style='color: green;'>שם הענק שלך: {user['hebGiant']}</b> </p>" \
+                                f"<p> 💰 <b style='color: red;'>שימו לב, תקציב מקסימלי: 50 ש\"ח</b></p> <br>" \
+                                f"<p>הודעה זו היא<b style='color: red;'> הודעה רשמית</b> למערכת הגמד והענק.</p>" \
+                                f"<p>אנא שלח/י לקבוצת המשפחה \"פלצנות מושלמת💨😍\" הודעת אישור שאת/ה " \
+                                f"קיבלת הודעה זאת וקיבלת את שם הענק שלך 📬</p>" \
+                                f"<p>🎅🤶 תודה על שיתוף הפעולה - צוות הגמד והענק</p>"
                 mail.Send()
                 print(f"Email sent to {user['engName']} giant is: {user['engGiant']}")
                 time.sleep(1)
