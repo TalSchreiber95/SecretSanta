@@ -6,6 +6,8 @@ import random
 import time
 from datetime import datetime
 
+year = f"{datetime.now().strftime('%Y')}"
+
 
 def sendmail(users):
     # Create a new sendingList.txt file and remove the old one if it exists
@@ -21,7 +23,7 @@ def sendmail(users):
                 outlook = win32com.client.Dispatch('outlook.application')
                 mail = outlook.CreateItem(0)
                 mail.To = user['email']
-                mail.Subject = 'Mini surprise for Hanukkah! 🎁🕎✨'
+                mail.Subject = f'Mini surprise for Hanukkah! {year} 🎁🕎✨'
                 mail.HTMLBody = f"<p><b style='color: blue;'>Hi dwarf {user['engName']}! </b></p>" \
                                 f"<p>Guess what? Your Secret Santa is on a mission to spread some Hanukkah magic! " \
                                 f"🕎 Get ready for a brighter gift than a dreidel. 🎁</p>" \
